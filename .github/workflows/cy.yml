@@ -1,0 +1,19 @@
+name: API_tests_on_gorest.co.in
+on:
+  push:
+    paths-ignore:
+      - 'README.md'
+      - 'package.json'
+      - 'cypress.config.js'
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    name: API tests
+    steps:
+      - name: Repository checkout
+        uses: actions/checkout@v3
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v5.x.x
+        env: 
+          URL: ${{ secrets.URL }}
+          TOKEN: ${{ secrets.TOKEN }}
