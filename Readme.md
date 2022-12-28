@@ -4,13 +4,9 @@
 
 Tests upon GET / POST / PATCH / DELETE endpoints
 
-To start tests use:
-    - npm install
-    - npx cypress run
+To start tests use: - npm install - npx cypress run
 
-To test dockerized: 
-    - docker build -t <preffered name> . (to build image)
-    - docker start <preffered name> to run container
+To test dockerized: - docker build -t <preffered name> . (to build image) - docker start <preffered name> to run container
 
     OR:
 

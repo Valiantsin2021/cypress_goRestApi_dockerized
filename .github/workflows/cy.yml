@@ -8,7 +8,7 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    #env: 
+    #env:
     #  URL: ${{ secrets.URL }}
     #  TOKEN: ${{ secrets.TOKEN }}
     name: API tests

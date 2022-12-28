@@ -1,5 +1,5 @@
-const { defineConfig } = require("cypress");
-require('dotenv').config();
+const { defineConfig } = require('cypress')
+require('dotenv').config()
 module.exports = defineConfig({
   video: false,
   e2e: {
@@ -7,8 +7,6 @@ module.exports = defineConfig({
       url: 'users',
       ...process.env
     },
-    setupNodeEvents(on, config) {
-
-    },
-  },
-});
+    setupNodeEvents(on, config) {}
+  }
+})

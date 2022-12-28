@@ -6,8 +6,14 @@
   "scripts": {
     "test": "npx cypress run",
     "cypress:run": "npx cypress run",
-    "cypress:open": "npx cypress open"
+    "cypress:open": "npx cypress open",
+    "lint": "eslint ./cypress/**/*.js",
+    "format": "prettier --write ."
   },
+  "pre-commit": [
+    "format",
+    "lint"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -15,6 +21,12 @@
     "cross-env": "^7.0.3",
     "cypress": "^12.2.0",
     "cypress-plugin-api": "^2.6.1",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "pre-commit": "^1.2.2",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-prettier": "^4.2.1"
   }
 }
